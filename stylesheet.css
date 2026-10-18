@@ -1,23 +1,238 @@
-body {background-color: #f7fbf9;
-font-family: 'Segoe UI', sans-serif;
-color: #2b4240;line-height: 1.7;padding: 40px;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; /* 点击页眉文字，平滑滚动跳转 */
+}
+body {
+    font-family: Georgia, serif;
+    color: #fcf8c2;
+    line-height:1.7;
+    text-shadow: 3px 2px 2px rgba(5, 4, 4, 0.12);
+}
+#about {background-color:#fff3b8}
 
-h1 {color: #326b64;}
-
-h2 {color: #488b82;}
-
-.card {background: #ffffff;
-padding: 32px;
-margin-bottom: 30px;
-border-radius: 16px;
-box-shadow: 0 3px 10px rgba(80,140,130,0.12);
-transition: 0.3s ease;}
-
-.card:hover {
-transform: translateY(-5px);
-box-shadow: 0 6px 16px rgba(80,140,130,0.18);
+/* ========== 顶部长方形页眉【重点！】 ========== */
+.page-header {
+    position: fixed;  /* 页眉固定在页面顶部，滚动网页页眉不会消失 */
+    top:0;
+    width: 100%;
+    height:70px;  /* 长方形页眉高度 */
+    background-color: #447a2b;
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
+    display:flex;
+    align-items:center;
+}
+.header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display:flex;
+    gap: 60px;  /* 页眉上4个文字之间的间距 */
+}
+.page-header a {
+    text-decoration: none;
+    color:#f8f7f7;
+    font-size:18px;
+     text-shadow: 3px 2px 2px rgba(5, 4, 4, 0.12);
+}
+.page-header a:hover {
+    color:#9b9b9b;
 }
 
-p, li {
-font-size:17px;
-color:#354e4b;}
+/* ========== 每一个大板块 ========== */
+.section-block {
+    min-height: 100vh; /* 每一个板块占满一整个屏幕高度，上下滚动，依次出现 */
+    padding-top: 90px; /* 给顶部页眉留出位置，文字不会被页眉盖住 */
+    display:flex;
+    align-items:center;
+}
+.content-wrap {
+    max-width:750px;
+    margin:0 auto;
+    padding:0 30px;
+}
+
+/* Welcome封面单独样式 */
+#welcome-page {
+  display: flex;
+  align-items: center; /* 上下居中，标题和文字盒子垂直对齐 */
+  gap: 50px; /* 左边标题 和 右边文字块 中间空隙 */
+  width: 95%;
+  margin: 0 auto;
+  padding: 60px 40px;
+  min-height: 100vh;
+  background-color: #367640;
+  box-sizing: border-box;
+}
+/* 左边：大标题区域 */
+.title-area {
+  width: 42%;
+}
+.title-area h1 {
+  font-size: 70px;
+  line-height: 1.1; /* 控制标题行高，防止文字折行 */
+}
+
+/* 右边：文字方块区域 */
+.text-box-area {
+  width: 58%;
+}
+.welcome-single-box {
+  display: flex;
+  gap: 35px;
+  padding: 30px;
+  background: #eddabc5d;
+  border-radius:10px;
+  transition:0.3s ease;
+}
+.col-left, .col-right {
+  width: 50%;
+}
+.welcome-single-box:hover {
+  transform: translateY(-3px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  
+}
+#welcome-page .welcome-lines {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+.line {
+  display: block;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.line-1 {
+  width: 200px;
+  background-color: #f8f5e8; /* 浅米白，和文字框呼应 */
+}
+
+.line-2 {
+  width: 400px;
+  background-color: #d7c9a3; /* 低饱和米黄色，增加层次 */
+}
+
+.note-block {
+    margin-bottom:24px;
+    padding:24px;
+    background:#d7eaba2d;
+    border-radius:10px;
+    border:1px solid #93242405;
+     text-shadow: 1px 2px 2px rgba(0,0,0,0.12);
+}
+.more-btn {
+  display:inline-block;
+  padding:8px 16px;
+  background:#88d1ba;
+  color:white;
+  text-decoration:none; 
+  border-radius:6px;
+  transition:0.3s ease;
+  margin-left:45%;
+}
+.more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+.note-block:hover {
+    transform:translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition:0.3s ease;
+}
+#summary {
+    background-color:#f7e6c6;
+     color:#2b6727;
+    margin:0 0 500px;
+}
+#journal {
+    background-color:#2b6727;
+    width:100%;
+    box-sizing:border-box;
+}
+
+#about-me {
+  min-height: 80vh;
+  background-color: #edd89f;
+  padding: 60px 50px;
+  box-sizing: border-box;
+  width:100%;
+    
+}
+.about-wrap {
+  width: 90%;
+}
+/* 左上角标题 */
+.about-heading {
+  font-size: 62px;
+  color:#2c4220;
+  margin:0 0 40px 0;
+  margin-left: 100px;
+}
+.about-content p {
+  font-size:18px;
+  line-height:1.7;
+  color:#2c4220;
+  margin:14px 0;
+  max-width: 750px;
+  margin-left: 100px; /*限制文字宽度，阅读舒适*/
+}
+.about-image{
+  width: 340px;
+  border-radius:10px;
+  margin:20px 0 20px 30px;
+  float:right;
+ position:relative;
+ top:-100px;
+}
+
+/* 按钮容器 */
+.about-buttons{
+  margin:30px 0 25px 0;
+  display:flex;
+  gap:24px;
+  margin-left: 100px;
+}
+/* 按钮样式 */
+.work-btn{
+  padding:12px 26px;
+  background:#88b96e;
+  color:#ffffff;
+  text-decoration:none;
+  border-radius:8px;
+  margin-left: 100px;
+  transition:0.3s ease;
+}
+.work-btn:hover{
+  background:#6c9454;
+}
+.comment-note {
+  margin-top:10px;
+  font-style: italic;
+}
+.comment-note {
+  margin-top:10px;
+  font-style: italic;
+}
+#summary h2 {
+    color:#2b6727;
+    margin:0 0 300px;
+    font-size: 20px;
+}
+#summary p {
+    color:#2b6727;
+    margin:0 0 200px;
+    font-size: 20px;
+}
