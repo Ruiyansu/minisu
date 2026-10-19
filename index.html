@@ -10,8 +10,8 @@
    <header class="page-header">
         <div class="header-inner">
             <a href=" ">Welcome</a >
-            <a href="#about">About Me</a >
-            <a href="#journal">Journal Notes</a >
+            <a href="#about-me">About Me</a >
+            <a href="#journal-container">Journal Notes</a >
             <a href="#summary">Final Reflection</a >
         </div>
     </header>
@@ -55,33 +55,48 @@
       <!-- 两个实体跳转按钮 -->
       <div class="about-buttons">
         <a class="work-btn" href="https://www.figma.com/proto/DRReaPZfU7LjZoVbK8R5Ts/Untitled?node-id=53-49&p=f&t=dAUo5w7aHlknR7WL-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=53%3A49&show-proto-sidebar=1 " target="_blank">Little Easter Egg🥚</a >
-        <a class="work-btn" href="粘贴你的视频链接" target="_blank">Watch VR & 3D Work</a >
+        <a class="work-btn" href="https://p2880103.wixsite.com/daily-nourish" target="_blank">WIX</a >
       </div>
       <p class="comment-note">If you want to know more about my work, you are welcome to reach out via the comment section.</p >
     </div>
      
   </div>
 </section>
+<section id="journal-container">
+   <div class="journal-container">
+  <h1>Journal Notes</h1>
 
-    <!-- 板块3：Journal Notes 笔记日记 -->
-    <section id="journal" class="section-block">
-        <div class="content-wrap">
-            <h2>Journal Notes</h2>
-            <div class="note-block">
-                <h3>01  WEEK1</h3>
-                <p>Platforms build a digital shadow from my behaviour. This shadow is not the real me.</p >
-            </div>
-            <div class="note-block">
-                <h3>02  WEEK2</h3>
-                <p>Prediction leads to engagement, which leads to new prediction. The loop can narrow my field of vision.</p >
-            </div>
-            <div class="note-block">
-                <h3>03  WEEK3</h3>
-                <p>Matching comments gain visibility. Opposing views may stay hidden. This strengthens the algorithm’s circle of anticipation.</p >
-                </div>   
-                <a href="week.html"class="more-btn">More</a>
-        </div>
-    </section
+  <!-- 默认可见 前三张卡片 -->
+  <div class="visible-cards">
+    <a href=" week1.html" class="week-card">
+      <h3>01 WEEK1</h3>
+      <p>Is technology making us stupid?</p >
+    </a >
+    <a href="week2.html" class="week-card">
+      <h3>02 WEEK2</h3>
+      <p>From Networks to Platform Society.</p >
+    </a >
+    <a href="week3.html" class="week-card">
+      <h3>03 WEEK3</h3>
+      <p>Matching comments gain visibility. Opposing views may stay hidden. This strengthens the algorithm's circle of anticipation.</p >
+    </a >
+  </div>
+
+  <!-- 点击More展开的隐藏卡片 -->
+  <input type="checkbox" id="show-more" hidden>
+  <div class="hidden-cards">
+    <a href="week4.html" class="week-card">
+      <h3>04 WEEK4</h3>
+      <p>Your week4 text here</p >
+    </a >
+    <a href="week5.html" class="week-card">
+      <h3>05 WEEK5</h3>
+      <p>Your week5 text here</p >
+    </a >
+  </div>
+
+  <label for="show-more" class="more-btn">More</label>
+</div>
 
 
     <section id="summary" class="section-block">
@@ -90,5 +105,47 @@
             <p>Overall summary of my autoethnography research and thinking about algorithm and shadow bodies.</p >
         </div>
 </section>
+<!-- 页脚Footer区域 -->
+<footer class="page-footer">
+  <div class="footer-left">
+    <h4>About this portfolio</h4>
+    <p>This is my personal digital media journal, exploring social media and digital self.</p >
+  </div>
+
+  <div class="footer-center">
+    <!-- 爱心点赞组件 -->
+    <div class="like-box">
+      <span class="heart-btn" id="heart">♡</span>
+      <span class="like-count" id="count">0</span>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <p> student Email: ngbk0130@leeds.ac.uk</p >
+    <p>Tel: 07550065948</p >
+  </div>
+</footer>
+<script>
+const heart = document.getElementById('heart');
+const count = document.getElementById('count');
+let liked = false;
+let num = 0;
+
+heart.onclick = function(){
+  if(!liked){
+    heart.classList.add('liked');
+    heart.textContent = "♥";
+    num++;
+    count.innerText = num;
+    liked = true;
+  }else{
+    heart.classList.remove('liked');
+    heart.textContent = "♡";
+    num--;
+    count.innerText = num;
+    liked = false;
+  }
+}
+</script>
 </body>
 </html>
