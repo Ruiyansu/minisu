@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Journal</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<!-- 顶部全局导航 -->
+<nav>
+    <a href=" ">Welcome</a >
+    <a href="index.html#about">About Me</a >
+    <a href="index.html#journal">Journal Notes</a >
+    <a href="index.html#summary">Final Reflection</a >
+</nav>
+
+<!-- 双栏容器：左侧周目录长廊｜右侧笔记内容 -->
+<div class="journal-two-column">
+  <aside class="journal-sidebar">
+    <h3>Journal Weeks</h3>
+    <ul class="week-list">
+      <li><a href="week1.html">Week 1</a ></li>
+      <li><a href="week2.html" >Week 2</a ></li>
+      <li><a href="week3.html">Week 3</a ></li>
+      <li><a href="week4.html"class="active">Week 4</a ></li>
+      <li><a href="week5.html">Week 5</a ></li>
+    </ul>
+  </aside>
+
+  <!-- 右侧笔记正文 -->
+  <div class="note-content">
+    <a href="index.html#journal" class="back-link">← Back to Journal List</a >
+
+    <h1>Week 4 Notes</h1>
+
+    <h2>COMM5780 Week 4 Study and Group Project Reflection</h2>
+<p>For Week 4 of COMM5780, we focused on research design, data collection and data capture planning. This session helped us learn how to develop an initial research idea into a structured, coherent research plan.</p>
+<p>I learned that a research project needs clear decisions on our research perspective, variables and suitable data sources from the start. We also need to plan how we will collect, filter and code our data. A key takeaway for me is keeping consistency across the whole design. We were asked to continuously review our plan and check whether our research questions, variables and data align well with each other. Our task this week was to build out the framework and detailed plan for our group research project, through in-class discussion and follow-up group meetings.</p>    
+<h2>Group Project Progress and Work Completed</h2>
+<p>Our group’s research explores generative AI use within higher education. Early on, we agreed our study would use one single perspective: Scenario 1 (student perspective). Our original plan was to look at students’ experiences, behaviours, attitudes and concerns around using generative AI for academic work.</p>
+<p>During our in-class group discussion, we brainstormed and settled on our broad research direction, finishing drafts for the first four sections of our research proposal. While we discussed, some group members raised questions about how practical our plan would be, and whether we could carry out this research smoothly in a real university setting.
+</p>   
+<p>After class, we met again online to keep developing the parts we hadn’t finished. We mainly worked on sections five and six, which cover our research variables and our plan for data capture.
+
+I then spent time going through our full research theme, structure and plan on my own, and thought through how we might collect our source materials. When I reviewed everything together, I noticed an inconsistency in our current research setup.</p>
+<h2>
+Observations and Challenges We Have</h2>
+<p>The main point I noticed is a shift in perspective. Our research question and the opening parts of our proposal are built around Scenario 1, the student perspective. However, as we worked out our variables and picked materials to capture, we chose official university AI guidance documents as our main source. These documents fit Scenario 2, the institutional / school policy perspective.
+In short: our research question centres on students, but the data and variables we are preparing to analyse come from institutional policy materials. There is a mismatch here that we will need to talk through as a group.
+
+We also have slightly different views within the group on what we should prioritise right now. Some teammates are focusing a lot on whether this research can be put into practice in the real world. My own view is that this coursework mainly assesses our research design. At this stage, having a well-structured, logically consistent research idea feels more important than testing real-world implementation. Getting stuck on practical barriers might slow us down as we refine our proposal.
+
+Besides that, we haven’t finalised all the details for our data work yet. We still need to agree together on our filtering criteria, coding rules and categories for the data we plan to collect.</p>  </div>
+
+<h2>
+    Personal Learning Reflection
+</h2>]
+<p>Working on this project this week showed me how important consistency is when designing research. The research perspective, research questions, variables and data sources all need to connect and support one another.
+
+Our current issue shows what can happen when different parts of a research plan do not line up. If our variables and data sit in a different perspective from our original research focus, it becomes harder to answer the question we set out to explore. This is a useful lesson: we need to keep checking back to our agreed perspective while we adjust our plan, so small shifts do not create bigger misalignment later on.</p>
+</div>
+
+<!-- 页脚 -->
+<footer class="page-footer">
+  <div class="footer-left">
+    <h4>About this portfolio</h4>
+    <p>This is my personal digital media journal, exploring social media and digital self.</p >
+  </div>
+  <div class="footer-center">
+    <div class="like-box">
+      <span class="heart-btn" id="heart">♡</span>
+      <span class="like-count" id="count">0</span>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p>Email: ngbk0130@leeds.ac.uk</p >
+
+  </div>
+</footer>
+<!-- 点赞JS -->
+<script>
+const heart = document.getElementById('heart');
+const count = document.getElementById('count');
+let liked = false;
+let num = 0;
+
+heart.onclick = function(){
+  if(!liked){
+    heart.classList.add('liked');
+    heart.textContent = "♥";
+    num++;
+    count.innerText = num;
+    liked = true;
+  }else{
+    heart.classList.remove('liked');
+    heart.textContent = "♡";
+    num--;
+    count.innerText = num;
+    liked = false;
+  }
+}
+</script>
+</body>
+</html>
