@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Journal</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<!-- 顶部全局导航 -->
+<nav>
+    <a href=" ">Welcome</a >
+    <a href="index.html#about">About Me</a >
+    <a href="index.html#journal">Journal Notes</a >
+    <a href="index.html#summary">Final Reflection</a >
+</nav>
+
+<!-- 双栏容器：左侧周目录长廊｜右侧笔记内容 -->
+<div class="journal-two-column">
+  <aside class="journal-sidebar">
+    <h3>Journal Weeks</h3>
+    <ul class="week-list">
+      <li><a href="week1.html">Week 1</a ></li>
+      <li><a href="week2.html" >Week 2</a ></li>
+      <li><a href="week3.html">Week 3</a ></li>
+      <li><a href="week4.html">Week 4</a ></li>
+      <li><a href="week5.html" class="active">Week 5</a ></li>
+    </ul>
+  </aside>
+
+  <!-- 右侧笔记正文 -->
+  <div class="note-content">
+    <a href="index.html#journal" class="back-link">← Back to Journal List</a >
+
+    <h1>Week 5 Notes</h1>
+<h2>Week 5 Learning Reflection</h2>
+<p>In Week 5, the core learning focus shifted entirely to data sorting and data visualisation construction, which effectively supplemented and revised the data work we completed in Week 4.
+
+First of all, we systematically reviewed and reorganised the raw data collected in the previous stage. In class, we re-clarified the core definition, research orientation and practical value of our Week 4 data collection work. Meanwhile, we summarised the existing problems and shortcomings of the preliminary data work, including ambiguous screening of data keywords, incomplete capture dimensions, and insufficient understanding of effective data standards in the early stage. I also sorted out my personal confusing points in the previous data crawling practice, which helped me correct my wrong operation logic in time and lay a foundation for subsequent visualisation production.
+
+Secondly, this week’s workshop focused on the complete production logic and operational methods of data visualisation. The teacher explained standard visualisation specifications and provided designated reading resources and reference web pages for us to learn relevant theoretical knowledge systematically. Combined with the theoretical guidance, we carried out practical data crawling and visualisation attempts in class.
+
+There was an obvious improvement in my personal practical operation this week. In the Week 4 independent attempt, I failed to capture valid data through the crawling tool due to incorrect keyword setting and unfamiliar operation steps. However, with the standard keyword guidelines and operation tutorials provided by the teacher in Week 5, I successfully crawled effective research data and obtained observable and analysable data results.
+
+In addition, we completed the simulation production practice of data visualisation with Excel in the workshop. I have fully mastered the basic process of sorting raw data, cleaning invalid data, and converting flat data into intuitive visual charts. This hands-on practice allowed me to understand how to transform discrete original data into structured visual presentation results that are suitable for academic analysis and research display.
+
+Overall, Week 5’s learning made up for the deficiencies of the early data collection stage. I have achieved progress from “inability to capture effective data” to “independent completion of data sorting and visualisation production”, and deepened my understanding of the whole research process of data collection, data cleaning and visual expression in digital media research.</p>
+  </div>   
+
+<!-- 页脚 -->
+<footer class="page-footer">
+  <div class="footer-left">
+    <h4>About this portfolio</h4>
+    <p>This is my personal digital media journal, exploring social media and digital self.</p >
+  </div>
+  <div class="footer-center">
+    <div class="like-box">
+      <span class="heart-btn" id="heart">♡</span>
+      <span class="like-count" id="count">0</span>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p>Email: ngbk0130@leeds.ac.uk</p >
+
+  </div>
+</footer>
+<!-- 点赞JS -->
+<script>
+const heart = document.getElementById('heart');
+const count = document.getElementById('count');
+let liked = false;
+let num = 0;
+
+heart.onclick = function(){
+  if(!liked){
+    heart.classList.add('liked');
+    heart.textContent = "♥";
+    num++;
+    count.innerText = num;
+    liked = true;
+  }else{
+    heart.classList.remove('liked');
+    heart.textContent = "♡";
+    num--;
+    count.innerText = num;
+    liked = false;
+  }
+}
+</script>
+</body>
+</html>
